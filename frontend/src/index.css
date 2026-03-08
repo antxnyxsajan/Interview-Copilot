@@ -1,0 +1,10 @@
+/* Base reset & font import handled in App.css */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1, h2, h3 { margin: 0; }
