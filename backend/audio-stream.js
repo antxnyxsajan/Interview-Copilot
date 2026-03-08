@@ -3,8 +3,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 export function setupAudioStream(onTranscript) {
-    // We removed the strict encoding params and added model=nova-2 for better accuracy
-    const deepgramUrl = 'wss://api.deepgram.com/v1/listen?model=nova-2&smart_format=true&keepalive=true';
+   const deepgramUrl = 'wss://api.deepgram.com/v1/listen?model=nova-2&smart_format=true&encoding=webm&keepalive=true&endpointing=1000';
     const sttWs = new WebSocket(deepgramUrl, {
         headers: { Authorization: `Token ${process.env.DEEPGRAM_API_KEY}` }
     });
